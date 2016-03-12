@@ -1,0 +1,12 @@
+data
+node_modules
+types
+uploads/*
+*.log
+*.swp
+*.swo
+/.idea
+*.map
+*.iml
+
+
