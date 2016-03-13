@@ -32,6 +32,10 @@ class ArrayQueue: public BagOfMazeStates
 
   // TODO: list additional private member variables here,
   static const int INIT_SIZE = 5;
+  
+  
+  // number of elements in the array
+  int num_elements;
 
   // index of the head of the queue.
   int head;

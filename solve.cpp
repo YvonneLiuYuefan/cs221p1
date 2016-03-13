@@ -171,12 +171,12 @@ int main ()
   // 221 STUDENTS:  Uncomment one of these, to select BFS, DFS, or BestFS
   // Later, you will uncomment the declarations here to use your new
   // implementations (ArrayQueue, LinkedListQueue, or HeapPriorityQueue).
-  ArrayStack activeStates;
+  // ArrayStack activeStates;
   //LinkedListStack activeStates;
-  //ArrayQueue activeStates;
+  ArrayQueue activeStates;
   //LinkedListQueue activeStates;
   //UnsortedPriorityQueue activeStates;
-  //HeapPriorityQueue activeStates;
+  // HeapPriorityQueue activeStates;
 
   // Eventually, we'll replace this with a better dictionary ADT...
   LinkedListDict seenStates;
