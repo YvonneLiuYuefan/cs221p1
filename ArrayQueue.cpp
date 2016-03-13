@@ -22,11 +22,13 @@ ArrayQueue::ArrayQueue()
   //              and do any other initialization
   //              needed (if any)
   // TODO: implement constructor                ****DONE****
-    int head = 0;
-    int tail = 0;
-    int capacity = INIT_SIZE;
-    MazeState** array = new MazeState*[capacity];
-    int num_elements = 0;
+
+    head = 0;
+    tail = 0;
+    capacity = INIT_SIZE;
+    array = new MazeState*[capacity];
+    num_elements = 0;
+
     
 }
 
