@@ -4,7 +4,7 @@ Student ugrad login #1: a4t8
 Student Name #2: Hyojin Yi
 Student ugrad login #2: x6w8a
 
-Team name (for fun!): TODO:
+Team name (for fun!): Alpha no Go
 
 Acknowledgment that you understand and have followed the course's
 collaboration policy

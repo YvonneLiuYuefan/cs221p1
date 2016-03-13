@@ -21,7 +21,7 @@ ArrayQueue::ArrayQueue()
   // Constructor: initialize member variables
   //              and do any other initialization
   //              needed (if any)
-  // TODO: implement constructor                ****DONE****
+  // implement constructor
     head = 0;
     tail = 0;
     capacity = INIT_SIZE;
@@ -29,10 +29,8 @@ ArrayQueue::ArrayQueue()
     num_elements = 0;
 } 
 
-void ArrayQueue::add(MazeState *elem)
-{
-  // TODO: implement add method
-  if ((tail + 1) % (capacity + 1) == head) {
+void ArrayQueue::add(MazeState *elem) {
+  if ((tail+1) % (capacity+1) == head) {
     // queue is full
     ensure_capacity(capacity+1); // ensure_capacity makes grows the array.
   }
@@ -42,59 +40,56 @@ void ArrayQueue::add(MazeState *elem)
     num_elements++;
 }
 
-MazeState *ArrayQueue::remove()
-{
-  // TODO: implement remove method              ****DONE****
+MazeState *ArrayQueue::remove() {
+  // implement remove method              ****DONE****
   assert(!is_empty());
   MazeState *temp = array[head];
-  head = (head + 1) % (capacity+1);
   num_elements--;
+  MazeState **old_array = array;
+  array = new MazeState*[capacity];
+  for (int i = 0; i < num_elements; i++) {
+    array[i] = old_array[i+1];
+  }
+  head = 0;
+  tail--;
   return temp;
 
 }
 
 bool ArrayQueue::is_empty()
 {
-  // TODO: implement is_empty method            ****DONE****
   return (head==tail);
 }
 
-// TODO: implement ensure_capacity (but leave this to last.. just start with lots of capacity!)
+// implement ensure_capacity (but leave this to last.. just start with lots of capacity!)
 void ArrayQueue::ensure_capacity(int n)
 {
   if (capacity < n) {
     // Make plenty of room.
     int target_capacity = (n > 2*capacity+1) ? n : (2*capacity+1);
 
-    // TODO: Set the current array aside and make room for the new one.
-
-    // TODO: Copy each element of the old array over.
-    // Update front carefully as you go!  Can you just use front++?
-
-    // TODO: Fix front and back and capacity so they correspond to the new array.
-    // TODO: Delete the old array.              ****DONE****
-      
-    MazeState ** old_array = array;
-    
+    // Set the current array aside and make room for the new one.
+    MazeState **old_array = array;
     array = new MazeState*[target_capacity];
-      
-    int i = 0;
-      
-    while((head+i)%capacity != tail){
-        array[i] = old_array[(head + i) %capacity];
-        i++;
+
+    // Copy each element of the old array over.
+    for (int i = 0; i < (num_elements - 1); i++) {
+      array[i] = old_array[head + i];
     }
-      capacity = target_capacity;
+    // Fix front and back and capacity so they correspond to the new array.
+    head = 0;
+    tail = num_elements + 1;
+    capacity = target_capacity;
+
+    // Delete the old array.              ****DONE****
     delete[] old_array;
   }
 
 }
 
 
-ArrayQueue::~ArrayQueue()
-{
-  // TODO: implement the destructor             ****DONE****
-delete array;
+ArrayQueue::~ArrayQueue() {
+  delete array;
 }
 
 #endif

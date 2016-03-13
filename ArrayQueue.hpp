@@ -30,7 +30,7 @@ class ArrayQueue: public BagOfMazeStates
   // use an explicit pointer, NOT MazeState *array[..] so you can resize.
   MazeState **array;
 
-  // TODO: list additional private member variables here,
+  //list additional private member variables here,
   static const int INIT_SIZE = 5;
 
   //number of elements in the array

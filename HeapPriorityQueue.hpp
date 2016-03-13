@@ -33,7 +33,6 @@ class HeapPriorityQueue : public BagOfMazeStates
     // type vector<MazeState *> to hold the heap.
     // You can look at the UnsortedPriorityQueue class
     // for an example of how to use the C++ vector<T> class.
-    vector<MazeState *> list;
 
     // Heap-related helper functions.
     bool is_root(int index);

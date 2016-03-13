@@ -18,24 +18,24 @@ HeapPriorityQueue::~HeapPriorityQueue() {
 }
 
 void HeapPriorityQueue::add(MazeState *elem) {
-  list.push_back(elem);
-  int size = (int)list.size();
+  heap.push_back(elem);
+  int size = (int)heap.size();
   swap_up(size - 1);
 }
 
 MazeState * HeapPriorityQueue::remove() {
   assert(!is_empty());
-  MazeState *ret = list[0];
-  int size = (int)list.size();
-  list[0] = list[size - 1];
-  list.resize(list.size() - 1);
+  MazeState *ret = heap[0];
+  int size = (int)heap.size();
+  heap[0] = heap[size - 1];
+  heap.resize(heap.size() - 1);
   swap_down(0);
   return ret;
 }
 
 
 bool HeapPriorityQueue::is_empty() {
-  return (list.size() == 0);
+  return (heap.size() == 0);
 }
 
 // You might find these helper functions helpful...
@@ -65,10 +65,10 @@ void HeapPriorityQueue::swap_up(int index) {
     return;
   }
   int p = parent(index);
-  if (list[index]->getBadness() < list[p]->getBadness()) {
-    MazeState *temp = list[index];
-    list[index] = list[p];
-    list[p] = temp;
+  if (heap[index]->getBadness() < heap[p]->getBadness()) {
+    MazeState *temp = heap[index];
+    heap[index] = heap[p];
+    heap[p] = temp;
     swap_up(p);
   }
 }
@@ -78,17 +78,17 @@ void HeapPriorityQueue::swap_down(int i) {
   int small = i;
   int left = first_child(i);
   int right = left +1;
-  int n = (int)list.size();
-  if (left < n && list[left]->getBadness() < list[small]->getBadness()) {
+  int n = (int)heap.size();
+  if (left < n && heap[left]->getBadness() < heap[small]->getBadness()) {
     small = left;
   }
-  if (right < n && list[right]->getBadness() < list[small]->getBadness()) {
+  if (right < n && heap[right]->getBadness() < heap[small]->getBadness()) {
     small = right;
   }
   if (small != i) {
-    MazeState *temp = list[i];
-    list[i] = list[small];
-    list[small] = temp;
+    MazeState *temp = heap[i];
+    heap[i] = heap[small];
+    heap[small] = temp;
     swap_down(small);
   }
 }
