@@ -22,8 +22,8 @@ Approximate hours on project: TODO:
 
 For teams, rough breakdown of work:
 
-Hyojin: ArrayQueue && LinkedListQueue
-Yuefan: HeapPriorityQueue
+Hyojin: ArrayQueue
+Yuefan: LinkedListQueue, HeapPriorityQueue
 
 ----------------------------------------------------------------------
 
