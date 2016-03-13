@@ -22,15 +22,12 @@ ArrayQueue::ArrayQueue()
   //              and do any other initialization
   //              needed (if any)
   // TODO: implement constructor                ****DONE****
-
     head = 0;
     tail = 0;
     capacity = INIT_SIZE;
     array = new MazeState*[capacity];
     num_elements = 0;
-
-    
-}
+} 
 
 void ArrayQueue::add(MazeState *elem)
 {
@@ -39,12 +36,10 @@ void ArrayQueue::add(MazeState *elem)
     // queue is full
     ensure_capacity(capacity+1); // ensure_capacity makes grows the array.
   }
-
   // Your code goes here...                     ****DONE****
     array[tail] = elem;
     tail = (tail + 1) % capacity;
     num_elements++;
-
 }
 
 MazeState *ArrayQueue::remove()
@@ -79,7 +74,8 @@ void ArrayQueue::ensure_capacity(int n)
     // TODO: Fix front and back and capacity so they correspond to the new array.
     // TODO: Delete the old array.              ****DONE****
       
-      MazeState ** old_array = array;
+    MazeState ** old_array = array;
+    
     array = new MazeState*[target_capacity];
       
     int i = 0;
