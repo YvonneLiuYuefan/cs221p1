@@ -9,6 +9,8 @@
 
 #include "BagOfMazeStates.hpp"
 
+using namespace std;
+
 // An implementation of a priority queue, using
 // a min-heap as the underlying data structure.
 //
@@ -31,6 +33,7 @@ class HeapPriorityQueue : public BagOfMazeStates
     // type vector<MazeState *> to hold the heap.
     // You can look at the UnsortedPriorityQueue class
     // for an example of how to use the C++ vector<T> class.
+    vector<MazeState *> list;
 
     // Heap-related helper functions.
     bool is_root(int index);
@@ -38,6 +41,8 @@ class HeapPriorityQueue : public BagOfMazeStates
     int first_child(int index);
     int num_children(int index);
     bool is_leaf(int index);
+    void swap_up(int index);
+    void swap_down(int index);
 
     // The array representation of the heap.
     vector<MazeState *> heap;

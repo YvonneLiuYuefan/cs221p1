@@ -1,8 +1,8 @@
-Student Name #1: TODO:
-Student ugrad login #1: TODO:
+Student Name #1: Yuefan Liu
+Student ugrad login #1: a4t8
 
-Student Name #2: TODO:
-Student ugrad login #2: TODO:
+Student Name #2: Hyojin Yi
+Student ugrad login #2: x6w8a
 
 Team name (for fun!): TODO:
 
@@ -10,9 +10,9 @@ Acknowledgment that you understand and have followed the course's
 collaboration policy
 (http://www.ugrad.cs.ubc.ca/~cs221/current/syllabus.shtml#conduct):
 
-TODO: [[Put your names here again as a signature]]
+[[Yuefan Liu; Hyojin Yi]]
 
-TODO: submit using: make handin-proj1
+submit using: make handin-proj1
 
 ----------------------------------------------------------------------
 
@@ -20,7 +20,10 @@ Approximate hours on project: TODO:
 
 ----------------------------------------------------------------------
 
-For teams, rough breakdown of work: TODO:
+For teams, rough breakdown of work:
+
+Hyojin: ArrayQueue && LinkedListQueue
+Yuefan: HeapPriorityQueue
 
 ----------------------------------------------------------------------
 
