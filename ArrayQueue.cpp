@@ -44,13 +44,13 @@ MazeState *ArrayQueue::remove() {
   // implement remove method              ****DONE****
   assert(!is_empty());
   MazeState *temp = array[head];
-  num_elements--;
   MazeState **old_array = array;
   array = new MazeState*[capacity];
   for (int i = 0; i < num_elements; i++) {
     array[i] = old_array[i+1];
   }
   head = 0;
+  num_elements--;
   tail--;
   return temp;
 
@@ -58,7 +58,7 @@ MazeState *ArrayQueue::remove() {
 
 bool ArrayQueue::is_empty()
 {
-  return (head==tail);
+  return (num_elements == 0);
 }
 
 // implement ensure_capacity (but leave this to last.. just start with lots of capacity!)
@@ -82,14 +82,14 @@ void ArrayQueue::ensure_capacity(int n)
     capacity = target_capacity;
 
     // Delete the old array.              ****DONE****
-    delete[] old_array;
+    delete [] old_array;
   }
 
 }
 
 
 ArrayQueue::~ArrayQueue() {
-  delete array;
+  delete [] array;
 }
 
 #endif
