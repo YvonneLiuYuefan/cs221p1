@@ -42,12 +42,10 @@ Type your answers directly in this file.
 (like 200000) to watch what's happening.  Do you see why this is called
 breadth-first search (BFS)?  How many steps long were your solutions?
 How does this compare with DFS?
-Maze1: 58 steps 
-Maze2:
-Maze3:
-Maze4:
-
-In comparison to DFS, BFS searches within the closest radii of the start by checking all the branches of the current node before moving onto the next node.
+Maze 1: 58 steps for both DFS and BFS; in comparison to DFS, BFS searches within the closest radii of the start by checking all the branches of the current node before moving onto the next node.
+Maze 2: 46 steps for DFS and 14 steps for BFS; since DFS only check one direction, it runs around the maze; BFS checks two directions at the same time, its solution goes directly to the destination.
+Maze 3: 247 steps for DFS and 5 steps for BFS; DFS works poorly on this maze since it goes a s-shaped way and does not go back; BFS check branches within the closest radii and cn find destination at the back more easily.
+Maze 4: 110 steps for DFS and 90 steps for BFS; the destination is far away from the starting point and is blocked by the "wall", thus the DFS can find a route more quickly while the BFS can find the shorter route with longer time.
 
 2.  Try to solve the blank Sudoku board using your ArrayQueue
 and LinkedListQueue classes.  What happens?  Why?
