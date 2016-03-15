@@ -63,11 +63,9 @@ out the delay and the print statements in the solveMaze function.
 How long does it take to solve the puzzle using your ArrayQueue
 class?  Using your LinkedListQueue class?  Is the difference big?
 
-ArrayQueue: 
-real	1m9.860s
-user	0m3.199s
-sys	0m0.040s
-LinkedListQueue: bus error
+ArrayQueue: 2m55.783s, 
+LinkedListQueue: 2m55.783s; 
+no big difference because both of them use Queue (i.e. both of them are BFS).
 
 4.  Edit solve.cpp to switch to the 4x4 and then 5x5 slider puzzles.
 Make sure to comment out the delay and print statements in the solveMaze
@@ -94,7 +92,10 @@ user	12m10.085s
 sys	0m6.337s
 
 
-UnsortedPriorityQueue:
+UnsortedPriorityQueue: 396 steps
+real	4m46.280s
+user	4m33.502s
+sys	0m2.557s
 
 
 ----------------------------------------------------------------------
