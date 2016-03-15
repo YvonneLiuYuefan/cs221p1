@@ -88,7 +88,10 @@ user	0m12.502s
 sys	  0m0.147s  
 
 5x5 slider:
-HeapPriority: 
+HeapPriority: 628 steps
+real	12m45.686s
+user	12m10.085s
+sys	0m6.337s
 
 
 UnsortedPriorityQueue:
