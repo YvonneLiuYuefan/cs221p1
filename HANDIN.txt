@@ -52,7 +52,7 @@ In comparison to DFS, BFS searches within the closest radii of the start by chec
 2.  Try to solve the blank Sudoku board using your ArrayQueue
 and LinkedListQueue classes.  What happens?  Why?
 
-ArrayQueue:
+ArrayQueue:A blank sudoku has too many options and the runtime is very long. In this case, DFS is a much better option for solving.
 
 LinkedListQueue:
 
