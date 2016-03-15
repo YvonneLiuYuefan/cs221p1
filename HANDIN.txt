@@ -4,7 +4,7 @@ Student ugrad login #1: a4t8
 Student Name #2: Hyojin Yi
 Student ugrad login #2: x6w8a
 
-Team name (for fun!): TODO:
+Team name (for fun!): Alpha no Go
 
 Acknowledgment that you understand and have followed the course's
 collaboration policy
@@ -16,8 +16,8 @@ submit using: make handin-proj1
 
 ----------------------------------------------------------------------
 
-Approximate hours on project: TODO:
-24 hours
+Approximate hours on project:
+36 hours
 ----------------------------------------------------------------------
 
 For teams, rough breakdown of work:
@@ -27,7 +27,7 @@ Yuefan: LinkedListQueue, HeapPriorityQueue
 
 ----------------------------------------------------------------------
 
-Acknowledgment of assistance: TODO:
+Acknowledgment of assistance:
 
 ----------------------------------------------------------------------
 
@@ -43,13 +43,12 @@ Type your answers directly in this file.
 breadth-first search (BFS)?  How many steps long were your solutions?
 How does this compare with DFS?
 
-TODO: 
 58 steps long; in comparison to DFS, BFS searches within the closest radii of the start by checking all the branches of the current node before moving onto the next node.
 
 2.  Try to solve the blank Sudoku board using your ArrayQueue
 and LinkedListQueue classes.  What happens?  Why?
 
-TODO: Using ArrayQueue you get a segmentation error and using LinkedListQueue you get a bus error. The ArrayQueue gets a bus error because it is trying to allocate more memory into protected areas of code. In LinkedListQueue, the bus error occurs because the memory address where it wants to write is misaligned. 
+Using ArrayQueue
 
 3.  Switch to the medium-difficulty Sudoku problem, and comment
 out the delay and the print statements in the solveMaze function.
