@@ -54,6 +54,8 @@ ArrayQueue:A blank sudoku has too many options and the runtime is very long. In 
 
 LinkedListQueue:
 
+It takes too long for ArrayQueue and LinkedListQueue to solve the blank Sudoku. While solving a blank sudoku, (for example the first line) what DFS does is set the value of first position and try the rest positions,
+but BFS tries every possibility of every position. Thus, BFS will take much longer time to solve the blank sudoku. In order to iterate through all the options the program would have to run all the possibilites, 9^10.
 
 
 3.  Switch to the medium-difficulty Sudoku problem, and comment
@@ -74,8 +76,23 @@ HeapPriorityQueue versus my UnsortedPriorityQueue?  For most students,
 mine will be faster?  Why might that happen?  Are the asymptotic
 runtimes for the heap versus the unsorted array wrong?
 
-HeapPriority: 224, 
-UnsortedPriorityQueue: 180
+4x4 slider:
+HeapPriority: 224 steps
+real	0m16.071s
+user	0m15.502s
+sys  	0m0.173s
+
+UnsortedPriorityQueue: 180 steps
+real	0m12.946s
+user	0m12.502s
+sys	  0m0.147s  
+
+5x5 slider:
+HeapPriority: 
+
+
+UnsortedPriorityQueue:
+
 
 ----------------------------------------------------------------------
 
