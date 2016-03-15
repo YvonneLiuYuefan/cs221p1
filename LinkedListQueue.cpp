@@ -36,6 +36,7 @@ MazeState *LinkedListQueue::remove()
   head = head->next;
   delete temp;
   size--;
+  return ret;
 }
 
 bool LinkedListQueue::is_empty()

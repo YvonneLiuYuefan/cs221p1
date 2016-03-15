@@ -4,7 +4,7 @@ Student ugrad login #1: a4t8
 Student Name #2: Hyojin Yi
 Student ugrad login #2: x6w8a
 
-Team name (for fun!): Alpha no Go
+Team name (for fun!): TODO:
 
 Acknowledgment that you understand and have followed the course's
 collaboration policy
@@ -17,7 +17,7 @@ submit using: make handin-proj1
 ----------------------------------------------------------------------
 
 Approximate hours on project: TODO:
-
+24 hours
 ----------------------------------------------------------------------
 
 For teams, rough breakdown of work:
@@ -43,19 +43,20 @@ Type your answers directly in this file.
 breadth-first search (BFS)?  How many steps long were your solutions?
 How does this compare with DFS?
 
-TODO:
+TODO: 
+58 steps long; in comparison to DFS, BFS searches within the closest radii of the start by checking all the branches of the current node before moving onto the next node.
 
 2.  Try to solve the blank Sudoku board using your ArrayQueue
 and LinkedListQueue classes.  What happens?  Why?
 
-TODO:
+TODO: Using ArrayQueue you get a segmentation error and using LinkedListQueue you get a bus error. The ArrayQueue gets a bus error because it is trying to allocate more memory into protected areas of code. In LinkedListQueue, the bus error occurs because the memory address where it wants to write is misaligned. 
 
 3.  Switch to the medium-difficulty Sudoku problem, and comment
 out the delay and the print statements in the solveMaze function.
 How long does it take to solve the puzzle using your ArrayQueue
 class?  Using your LinkedListQueue class?  Is the difference big?
 
-TODO:
+TODO: ArrayQueue: no solution exists, LinkedListQueue: bus error
 
 4.  Edit solve.cpp to switch to the 4x4 and then 5x5 slider puzzles.
 Make sure to comment out the delay and print statements in the solveMaze
@@ -64,7 +65,7 @@ HeapPriorityQueue versus my UnsortedPriorityQueue?  For most students,
 mine will be faster?  Why might that happen?  Are the asymptotic
 runtimes for the heap versus the unsorted array wrong?
 
-TODO:
+TODO: HeapPriority: 224, UnsortedPriorityQueue: 180
 
 ----------------------------------------------------------------------
 
