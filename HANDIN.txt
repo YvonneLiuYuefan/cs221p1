@@ -42,20 +42,32 @@ Type your answers directly in this file.
 (like 200000) to watch what's happening.  Do you see why this is called
 breadth-first search (BFS)?  How many steps long were your solutions?
 How does this compare with DFS?
+Maze1: 58 steps 
+Maze2:
+Maze3:
+Maze4:
 
-58 steps long; in comparison to DFS, BFS searches within the closest radii of the start by checking all the branches of the current node before moving onto the next node.
+In comparison to DFS, BFS searches within the closest radii of the start by checking all the branches of the current node before moving onto the next node.
 
 2.  Try to solve the blank Sudoku board using your ArrayQueue
 and LinkedListQueue classes.  What happens?  Why?
 
-Using ArrayQueue
+ArrayQueue:
+
+LinkedListQueue:
+
+
 
 3.  Switch to the medium-difficulty Sudoku problem, and comment
 out the delay and the print statements in the solveMaze function.
 How long does it take to solve the puzzle using your ArrayQueue
 class?  Using your LinkedListQueue class?  Is the difference big?
 
-TODO: ArrayQueue: no solution exists, LinkedListQueue: bus error
+ArrayQueue: 
+real	1m9.860s
+user	0m3.199s
+sys	0m0.040s
+LinkedListQueue: bus error
 
 4.  Edit solve.cpp to switch to the 4x4 and then 5x5 slider puzzles.
 Make sure to comment out the delay and print statements in the solveMaze
@@ -64,7 +76,8 @@ HeapPriorityQueue versus my UnsortedPriorityQueue?  For most students,
 mine will be faster?  Why might that happen?  Are the asymptotic
 runtimes for the heap versus the unsorted array wrong?
 
-TODO: HeapPriority: 224, UnsortedPriorityQueue: 180
+HeapPriority: 224, 
+UnsortedPriorityQueue: 180
 
 ----------------------------------------------------------------------
 
